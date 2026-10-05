@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - ex-6
+  pull_request:
+    branches:
+      - ex-6
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test
+        run: echo "GitHub Actions is working!"
